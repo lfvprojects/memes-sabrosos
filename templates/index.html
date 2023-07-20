@@ -1,18 +1,77 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>MEMES SABROSOS</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="refresh" content="30"/>
+        <meta http-equiv="refresh" content="30;url=http://127.0.0.1:8080/">
         <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #ffffff;
+                color: #333;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
 
+            .content-container {
+                background-color: #f7f7f7;
+                padding: 1rem;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                max-width: 80%;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+                color: #007bff;
+            }
+
+            p {
+                font-size: 1.2rem;
+                margin: 0.5rem 0;
+            }
+
+            /* Make all text inside .content-container bolder except h1 */
+            .content-container > *:not(h1) {
+                font-weight: bold;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Responsive styles */
+            @media (max-width: 600px) {
+                h1 {
+                    font-size: 2rem;
+                }
+
+                .content-container {
+                    max-width: 95%;
+                }
+            }
         </style>
     </head>
     <body>
-        <h1>MEMES SABROSOS</h1>
-        <p>PILLA TU MEME PAPS, LO REFRESCO 30S</p>
-        <p><img src="{{meme_img}}"></p>
-        <p>SUBREDDIT ACTUAL: {{subreddit}}</p>
-        <br>
-        <p>{{server}}</p>
+        <div class="content-container">
+            <h1>MEMES SABROSOS</h1>
+            <div class="image-box">
+                <img src="{{meme_img}}">
+            </div>
+            <div class="text-box">
+                <p>PILLA TU MEME PAPS, LO REFRESCO EN 30S</p>
+                <p>SUBREDDIT ACTUAL: {{subreddit}}</p>
+            </div>
+        </div>
     </body>
 </html>
+
