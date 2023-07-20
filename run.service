@@ -1,0 +1,14 @@
+[Unit]
+Description=Start Flask Application
+#After=rc-local.service
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /memes-sabrosos/run
+RemainAfterExit=yes
+#ExecStop=/usr/bin/bash /sbin/ifconfig ax0 down; /etc/ax25/ax25-down
+
+[Install]
+#WantedBy=multi-user.target 
+WantedBy=basic.target
