@@ -5,6 +5,7 @@ After=network-online.target
 
 [Service]
 Type=oneshot
+Environment="server=server"
 ExecStart=/bin/bash /memes-sabrosos/run
 RemainAfterExit=yes
 #ExecStop=/usr/bin/bash /sbin/ifconfig ax0 down; /etc/ax25/ax25-down
