@@ -30,6 +30,13 @@
                 font-size: 2.5rem;
                 margin-bottom: 0.5rem;
                 color: #007bff;
+                display: flex;
+                align-items: center; /* Center the emoji and the title horizontally */
+            }
+
+            h1::before {
+                content: '🥵'; /* Add the hot face emoji before the title */
+                margin-right: 0.5rem; /* Add some spacing between the emoji and the title */
             }
 
             p {
@@ -43,10 +50,15 @@
             }
 
             img {
-                max-width: 100%;
+                max-width: 25vw; /* 1/4th of the width of the viewport */
                 height: auto;
                 border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Center the image */
+            .image-box {
+                text-align: center;
             }
 
             /* Responsive styles */
@@ -63,7 +75,7 @@
     </head>
     <body>
         <div class="content-container">
-            <h1>MEMES SABROSOS</h1>
+            <h1>🥵 MEMES SABROSOS</h1>
             <div class="image-box">
                 <img src="{{meme_img}}">
             </div>
@@ -76,4 +88,3 @@
         </div>
     </body>
 </html>
-
